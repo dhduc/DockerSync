@@ -1,0 +1,10 @@
+version: '2'
+services:
+  system:
+    image: ducdh/ubuntu:16.04
+    hostname: system
+    container_name: system
+    volumes:
+      - ./etc/nginx/conf.d:/etc/nginx/conf.d
+      - ./var/log/nginx:/var/log/nginx
+      - ./var/www/html:/var/www/html
