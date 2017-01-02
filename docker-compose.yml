@@ -1,7 +1,7 @@
 version: '2'
 services:
   system:
-    image: ducdh/ubuntu:16.04
+    image: ducdh/ubuntu
     hostname: system
     container_name: system
     volumes:
