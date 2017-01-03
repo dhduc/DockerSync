@@ -3,6 +3,8 @@ services:
   application:
     image: huuduc2107/ubuntu
     container_name: huuduc2107_ubuntu
+    ports:
+      - "8000:80"
     volumes:
       - ./etc/mysql:/etc/mysql
       - ./etc/nginx/conf.d:/etc/nginx/conf.d
@@ -11,3 +13,4 @@ services:
       - ./var/lib/mysql:/var/lib/mysql
       - ./var/log/mysql:/var/log/mysql 
       - ./var/log/nginx:/var/log/nginx
+    tty: true  
