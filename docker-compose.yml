@@ -1,10 +1,13 @@
 version: '2'
 services:
-  system:
-    image: ducdh/ubuntu
-    hostname: system
-    container_name: system
+  application:
+    image: huuduc2107/ubuntu
+    container_name: huuduc2107_ubuntu
     volumes:
+      - ./etc/mysql:/etc/mysql
       - ./etc/nginx/conf.d:/etc/nginx/conf.d
-      - ./var/log/nginx:/var/log/nginx
+      - ./etc/supervisor/conf.d:/etc/supervisor/conf.d
       - ./var/www/html:/var/www/html
+      - ./var/lib/mysql:/var/lib/mysql
+      - ./var/log/mysql:/var/log/mysql 
+      - ./var/log/nginx:/var/log/nginx
